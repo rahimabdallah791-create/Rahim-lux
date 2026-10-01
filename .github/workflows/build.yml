@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: unzip -q Kivinjari.zip
+      - run: unzip -q RahimLuxGo.zip
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -14,8 +14,8 @@ jobs:
         with:
           gradle-version: 8.7
       - run: gradle assembleDebug --no-daemon
-        working-directory: Kivinjari
+        working-directory: RahimLuxGo
       - uses: actions/upload-artifact@v4
         with:
-          name: Kivinjari-APK
-          path: Kivinjari/app/build/outputs/apk/debug/*.apk
+          name: RahimLuxGo-APK
+          path: RahimLuxGo/app/build/outputs/apk/debug/*.apk
