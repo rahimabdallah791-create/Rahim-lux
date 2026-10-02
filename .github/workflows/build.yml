@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: unzip -q RahimLuxGo.zip
+      - run: unzip -q "$(ls RahimLuxGo-v*.zip | sort -V | tail -1)"
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
